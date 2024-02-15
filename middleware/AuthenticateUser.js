@@ -3,13 +3,7 @@ config();
 import { sign, verify } from "jsonwebtoken";
 
 function createToken(user) {
-  return sign(
-    {
-      emailAdd: user.emailAdd,
-      userPwd: user.userPwd,
-    },
-    process.env.SECRET_KEY,
-    {
+  return sign({ emailAdd: user.emailAdd, userPwd: user.userPwd,},process.env.SECRET_KEY, {
       expiresIn: "1h",
     }
   );
