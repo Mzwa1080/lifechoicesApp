@@ -1,14 +1,14 @@
 import express from 'express'
 import bodyParser from 'body-parser'
-import { Users } from '../model/index'
-import { verifyToken } from '../middleware/AuthenticateUser'
+import { users } from '../model/index.js'
+// import { verifyToken } from '../middleware/AuthenticateUser'
 
 const userRouter = express.Router()
 
 // Fetch users
 userRouter.get('/', (req,res)=>{
     try{
-        Users.fetchUsers(req, res)
+        users.fetchUsers(req, res)
     }catch(e){
         res.json({
             status : res.statusCode,
@@ -19,7 +19,7 @@ userRouter.get('/', (req,res)=>{
 // fetch single user
 userRouter.get('/:id', (req,res)=>{
     try {
-        Users.fetchUser(req,res)
+        users.fetchUser(req,res)
     }catch(e){
         res.json({
             status:res.statusCode,
@@ -31,7 +31,7 @@ userRouter.get('/:id', (req,res)=>{
 
 userRouter.post('/register', bodyParser.json(), (req,res)=>{
     try {
-        Users.createUser(req,res)
+        users.createUser(req,res)
     } catch (err) {
         res.json({
             status : res.statusCode,
