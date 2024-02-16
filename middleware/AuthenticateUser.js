@@ -1,9 +1,9 @@
 import { config } from "dotenv";
 config();
-import { sign, verify } from "jsonwebtoken";
+import jwt from "jsonwebtoken";
 
 function createToken(user) {
-  return sign({ emailAdd: user.emailAdd, userPwd: user.userPwd,},process.env.SECRET_KEY, {
+  return jwt.sign({ emailAdd: user.emailAdd, userPwd: user.userPwd,},process.env.SECRET_KEY, {
       expiresIn: "1h",
     }
   );
@@ -12,7 +12,7 @@ function verifyToken(req, res, next) {
   // retrieve a token from the browser/cookies
   let token = req?.headers["Authorization"];
   if (token) {
-    if (verify(token, process.env.SECRET_KEY)) {
+    if (jwt.verify(token, process.env.SECRET_KEY)) {
       next();
     } else {
       req?.json({
