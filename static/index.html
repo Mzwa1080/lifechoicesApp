@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css
+    ">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+
+    <div class="container">
+        <h1 class="mb-4 ps-5 ms-5">
+            <u>
+                Endpoints Information
+            </u>
+        </h1>
+
+        <table class="table table-striped mt-4">
+    
+            <thead>
+                <th>Routes</th>
+                <th>HTTP methods</th>
+                <th>Description</th>
+            </thead>
+            
+            <tbody>
+
+                <tr>
+                    <td>/</td>
+                    <td>GET</td>
+                    <td>Render Home Page index.html </td>
+                </tr>
+                <th colspan="4">
+                    Users Endpoint
+                </th>
+                
+                <tr>
+                    <td>/</td>
+                    <td>GET</td>
+                    <td>Retrieving all/multiple users</td>
+
+                </tr>
+                <tr>
+                    <td>/:id</td>
+                    <td>GET</td>
+                    <td>Retrieving a single user</td>
+
+                </tr>
+                <tr>
+                    <td>/register</td>
+                    <td>POST</td>
+                    <td>Adding users and products.</td>
+
+                </tr>
+                <th colspan="4">
+                    Products Endpoints
+                </th>
+                <tr>
+                    <td>/</td>
+                    <td>GET</td>
+                    <td>Retrieving multiple/all Products</td>
+
+                </tr>
+
+                <tr>
+                    <td>/:id</td>
+                    <td>GET</td>
+                    <td>Retrieving a Product</td>
+
+                </tr>
+                <tr>
+                    <td>/register</td>
+                    <td>POST</td>
+                    <td>Adding products.</td>
+                </tr>
+            </tbody>
+        </table>
+
+    
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js
+        "></script>
+</body>
+</html>
