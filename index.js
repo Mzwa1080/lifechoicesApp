@@ -9,7 +9,7 @@ config()
 
 
 const app = express()
-const port = +process.env.PORT || 4444
+const port = +process.env.PORT || 4000
 
 app.use((req,res,next)=>{
     res.header('Access-Control-Allow-Origin', "*");

@@ -1,7 +1,4 @@
 import { createPool } from "mysql";
-import { config } from "dotenv";
-
-config()
 import "dotenv/config"
 
 let connection = createPool({
@@ -10,7 +7,6 @@ let connection = createPool({
     user : process.env.DB_UserName,
     password : process.env.DB_UserPass,
     multipleStatements : true,
-    
     connectionLimit : 30
 })
 

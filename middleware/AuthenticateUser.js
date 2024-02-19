@@ -2,7 +2,7 @@ import { config } from "dotenv";
 config();
 import jwt from "jsonwebtoken";
 
-let {sign , verify} = jwt
+// let {sign , verify} = jwt
 
 function createToken(user) {
   return sign({ emailAdd: user.emailAdd, userPwd: user.userPwd,},process.env.SECRET_KEY, {

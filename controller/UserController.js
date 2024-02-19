@@ -6,7 +6,7 @@ import { users } from '../model/index.js'
 const userRouter = express.Router()
 
 // Fetch users
-userRouter.get('/', (req,res)=>{
+userRouter.get('/', (req, res)=>{
     try{
         users.fetchUsers(req, res)
     }catch(e){
