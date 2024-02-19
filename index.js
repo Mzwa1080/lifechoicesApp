@@ -31,7 +31,7 @@ app.use(
     cookieParser,
     cors()
 )
-app.use('^/$|/lifechoices', (req,res)=>{
+app.use('/', (req,res)=>{
     res.status(200).sendFile(path.join(__dirname, './static/index.html'))
 })
  

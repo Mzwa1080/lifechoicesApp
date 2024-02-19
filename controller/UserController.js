@@ -16,6 +16,8 @@ userRouter.get('/', (req,res)=>{
         })
     }
 })
+
+
 // fetch single user
 userRouter.get('/:id', (req,res)=>{
     try {

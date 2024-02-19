@@ -55,6 +55,7 @@ class Users{
                     token,
                     msg: 'You\'re registered'
                 })
+                console.log(token);
             }
         })
     }
