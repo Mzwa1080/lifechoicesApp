@@ -1,14 +1,12 @@
 import { createPool } from "mysql";
-import { config } from "dotenv";
+import "dotenv/config"
 
-config()
 let connection = createPool({
-    host : process.env.HOST,
-    database : process.env.DBname,
-    user : process.env.User,
-    password : process.env.UserPass,
+    host : process.env.DB_HOST,
+    database : process.env.DB_Name,
+    user : process.env.DB_UserName,
+    password : process.env.DB_UserPass,
     multipleStatements : true,
-    
     connectionLimit : 30
 })
 
